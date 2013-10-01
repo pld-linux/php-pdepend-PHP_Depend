@@ -11,7 +11,6 @@ Source0:	http://pear.pdepend.org/get/%{pearname}-%{version}.tgz
 # Source0-md5:	a639153c9d24316ffadd8fff6df0123b
 URL:		http://pear.pdepend.org/package/PHP_Depend/
 BuildRequires:	php-channel(pear.pdepend.org)
-BuildRequires:	php-packagexml2cl
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
@@ -35,9 +34,7 @@ In PEAR status of this package is: %{status}.
 
 %prep
 %pear_package_setup
-
-%build
-packagexml2cl package.xml > ChangeLog
+mv docs/PHP_Depend/* .
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -50,8 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog install.log
-%doc docs/PHP_Depend/*
+%doc CHANGELOG LICENSE install.log
 %{php_pear_dir}/.registry/.channel.*/*.reg
 %attr(755,root,root) %{_bindir}/pdepend
 %{php_pear_dir}/PHP/Depend.php
