@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	PHP_Depend design quality metrics for PHP packages
 Name:		php-pdepend-PHP_Depend
-Version:	1.1.1
+Version:	1.1.4
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.pdepend.org/get/%{pearname}-%{version}.tgz
-# Source0-md5:	a639153c9d24316ffadd8fff6df0123b
+# Source0-md5:	2a026025e6d7e85020ef50b0d28638bb
 URL:		http://pear.pdepend.org/package/PHP_Depend/
 BuildRequires:	php-channel(pear.pdepend.org)
 BuildRequires:	php-pear-PEAR
@@ -21,7 +21,7 @@ Requires:	php(spl)
 Requires:	php(tokenizer)
 Requires:	php-channel(pear.pdepend.org)
 Requires:	php-pear
-Suggests:	php-pecl-imagick
+Suggests:	php(imagick)
 Obsoletes:	php-pdepend-PHP-Depend
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
