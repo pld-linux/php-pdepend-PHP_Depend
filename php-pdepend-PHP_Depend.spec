@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	PHP_Depend
-%include	/usr/lib/rpm/macros.php
 Summary:	PHP_Depend design quality metrics for PHP packages
 Name:		php-pdepend-PHP_Depend
 Version:	1.1.4
