@@ -3,7 +3,7 @@
 Summary:	PHP_Depend design quality metrics for PHP packages
 Name:		php-pdepend-PHP_Depend
 Version:	1.1.4
-Release:	1
+Release:	2
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.pdepend.org/get/%{pearname}-%{version}.tgz
